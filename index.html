@@ -11,10 +11,15 @@
   <link fetchpriority="high" rel="preload" href="./assets/img/photos/plumbing-hero-blueprint-320w.JPG" as="image">
   <link rel="stylesheet" href="./assets/css/style.css">
   <script src="./assets/js/perf.js"></script>
+  <script>
+    window.addEventListener("load", () => {
+      document.querySelector(".page-loader").classList.add("done");
+    })
+  </script>
 </head>
 
 <body>
-  <div class="page-loader"></div>
+  <div class="page-loader" importance="high"></div>
   <div>
     <header>
       <nav>
@@ -132,7 +137,7 @@
       </div>
       <div class="footer__flex">
         <div class="footer__flex-child footer__icon-container">
-          <img class="footer__icon ml-3px" src="./assets/img/icons/location-dot-icon-24w.png" alt="">
+          <img class="footer__icon ml-2px" src="./assets/img/icons/location-dot-icon-24w.png" alt="">
         </div>
         <div class="footer__flex-child footer__contact-text-container">
           <h4>Address</h4>
