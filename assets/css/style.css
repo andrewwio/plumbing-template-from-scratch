@@ -35,6 +35,7 @@
   --bs-gray-800: #21262c;
   --bs-gray-900: #1e2228;
   --bs-blue: #3f78e0;
+  --bs-light-blue: #e0e9fa;
   --bs-soft-blue: #f1f5fd;
   --bs-sky: #5eb9f0;
   --bs-green: #45c4a0;
@@ -152,12 +153,23 @@ body {
   word-spacing: 0.1rem;
 }
 
+h2 {
+  font-size: var(--fs-large);
+}
+
+h4 {
+  font-size: var(--fs-h3);
+  line-height: 1.45;
+}
+
 h1,
 h2,
-h3 {
+h3,
+h4 {
   color: var(--bs-navy);
   font-weight: var(--fw-600);
 }
+
 
 ul {
   list-style: none;
@@ -281,6 +293,8 @@ animation: loader-scale 1s ease-out infinite;
 
 .container {
   max-width: 1260px;
+  margin-top: var(--m-2-5);
+  margin-bottom: var(--m-2-5);
   margin-left: var(--m-1-5);
   margin-right: var(--m-1-5);
 }
@@ -1172,7 +1186,62 @@ nav__close:hover {
 
 /*==================== PROCESS ====================*/
 
-.process__bg {
+.process__title {
+  margin-bottom: var(--m-0-5);
+}
+
+.process__description {
+  margin-bottom: var(--m-2);
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-400);
+}
+
+.process__row {
+  margin: 0;
+}
+
+.process__column {
+  margin: 0;
+}
+
+.process__circle {
+  position: relative;
+  z-index: 2;
+  width: 4rem;
+  height: 4rem;
+  font-size: var(--fs-h3);
+  margin-bottom: var(--m-1);
+  padding: 0;
+  border-radius: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1; 
+  backface-visibility: hidden;
+  background-color: var(--bs-light-blue);
+  border-color: transparent;
+}
+
+.process__number {
+  display: table-cell;
+  text-align: center;
+  margin: 0 auto;
+  vertical-align: middle;
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-700);
+  line-height: 1;
+  color: var(--bs-blue);
+}
+
+.process__subtitle {
+  margin-bottom: 0.25rem;
+}
+
+.process__text {
+  margin-bottom: var(--m-1-5);
+}
+
+/* .process__bg {
     background-color: var(--input-color);
 }
 
@@ -1211,7 +1280,7 @@ nav__close:hover {
 .process__card-description {
     color: var(--text-color);
     font-size: var(--fs-h4);
-}
+} */
 
 /*==================== PORTFOLIO ====================*/
 .portfolio__container {
@@ -1388,7 +1457,6 @@ nav__close:hover {
 }
 
 .contact__title {
-  font-size: var(--fs-large);
   margin-bottom: var(--m-0-75);
 }
 
