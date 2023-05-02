@@ -174,6 +174,9 @@ h4 {
   font-weight: var(--fw-600);
 }
 
+p {
+  margin-bottom: var(--m-1-5);
+}
 
 ul {
   list-style: none;
@@ -211,7 +214,6 @@ blockquote {
 }
 
 blockquote p {
-  margin-bottom: var(--m-1);
   font-size: var(--fs-h2);
   font-weight: var(--fw-400);
   line-height: 1.7;
@@ -236,7 +238,7 @@ address {
 
 /*==================== REUSABLE CSS CLASSES ====================*/
 .section {
-  padding: 4rem 0 2rem;
+  padding: 0 0 2rem 0;
 }
 
 .section__title {
@@ -779,8 +781,80 @@ nav__close:hover {
   transform: rotate(180deg);
 }
 
-/*==================== faq ====================*/
-.faq__container {
+/*==================== FAQ ====================*/
+
+.faq__title {
+  margin-bottom: var(--m-1);
+  text-align: center;
+  line-height: 1.3;
+}
+
+.faq__subheading {
+  margin-bottom: var(--m-2-5);
+  text-align: center;
+  font-size: var(--fs-h3);
+}
+
+.faq__accordion-wrapper {
+  margin-bottom: var(--m-1-5);
+  padding: 1rem 1rem 0 1rem;
+  border-radius: 0.4rem;
+  box-shadow: 0 0 0 0.05rem rgba(8, 60, 130, 0.06), 0rem 0rem 1.25rem rgba(30, 34, 40, 0.04);
+}
+
+.faq__accordion input {
+  display: none;
+}
+
+.faq__accordion label {
+  display: block;    
+  cursor: pointer;
+  width: 100%;
+  padding: 0 0 0 1rem;
+  margin: 0;
+  border: 0;
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-600);
+  transition: all 150ms ease-in-out;
+  background: none;
+}
+
+.faq__accordion label:before {
+  content: '>';
+  position: absolute;
+  left: 2.5rem;
+  transform: rotate(90deg);
+  transition: transform 300ms;
+}
+
+.faq__accordion label:hover {
+  color: var(--bs-blue);
+}
+
+.faq__accordion-text {
+  padding: 1rem 1rem 0 1rem;
+}
+
+.faq__accordion > input + label + .faq__accordion-text {
+  max-height: 0vh;
+  transition: 500ms;
+  overflow: hidden;
+}
+
+.faq__accordion > input:checked + label + .faq__accordion-text {
+  max-height: 100vh;
+}
+
+.faq__accordion > input:checked + label:before {
+  transition: all 300ms ease-in-out;
+  transform: rotate(270deg);
+}
+
+
+
+
+
+/* .faq__container {
   row-gap: 0;
   max-width: 540px;
 }
@@ -920,7 +994,7 @@ nav__close:hover {
 
 .faq__open .faq__arrow {
   transform: rotate(180deg);
-}
+} */
 
 /*==================== QUALIFICATION ====================*/
 .qualification__tabs {
@@ -1031,7 +1105,7 @@ nav__close:hover {
 }
 
 .services__text {
-  margin-bottom: var(--m-2);
+  margin-bottom: var(--m-1);
 }
 
 .services__text h4 {
@@ -1267,7 +1341,7 @@ nav__close:hover {
   margin-bottom: var(--m-0-5);
 }
 
-.process__description {
+.process__subheading {
   margin-bottom: var(--m-2);
   font-size: var(--fs-h2);
   font-weight: var(--fw-400);
@@ -1491,7 +1565,6 @@ nav__close:hover {
 
 .blog p {
   margin-top: var(--m-1-5);
-  margin-bottom: var(--m-1-5);
 }
 
 .blog__img {
@@ -1783,7 +1856,6 @@ nav__close:hover {
 
 .footer__contact-information p {
   font-size:var(--fs-h4);
-  margin-bottom: var(--m-1-5);
 }
 .footer__contact-information p a:not(.btn):not([class*=link-]) {
   color: var(--bs-gray-300);
@@ -1804,7 +1876,6 @@ nav__close:hover {
 
 .footer__copyright p {
   font-size: var(--fs-h4);
-  margin-bottom: var(--m-1-5);
 }
 
 .footer__socials-icon {
