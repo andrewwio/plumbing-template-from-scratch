@@ -80,28 +80,91 @@
       </nav>
     </header>
     <section id="home">
-      <div>
-        <div>
-          <div>
-            <div>
-              <div>
-                <div>
-                  <h1>Plumber Woodlands</h1>
-                  <p>We connect you with qualified local plumbers in The Woodlands and surrounding areas.</p>
-                  <div>
-                    <a href="tel:1234567890" >Give us a Call</a>
-                    <a href="#contact" >Send us an Email</a>
+      <div class="swiper-container swiper-hero dots-over" data-margin="0" data-autoplay="true" data-autoplaytime="5000" data-nav="true" data-dots="true" data-items="1">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide h-100 bg-overlay bg-overlay-600 bg-dark hero-img">
+              <div class="container h-100">
+                <div class="row h-100">
+                  <div class="col-md-10 offset-md-1 col-lg-7 offset-lg-4 col-xl-7 offset-xl-4 col-xxl-7 offset-xxl-5 text-center text-lg-start justify-content-center align-self-center align-items-start mt-12">
+                    <h1 class="display-1 fs-54 mb-4 text-white animate__animated animate__slideInDown animate__delay-2s">Plumber Woodlands</h1>
+                    <p class="lead fs-23 lh-sm mb-7 text-white animate__animated animate__slideInRight animate__delay-3s">We connect you with qualified local plumbers in The Woodlands and surrounding areas.</p>
+                    <div class="animate__animated animate__slideInUp animate__delay-4s">
+                      <a href="tel:1234567890" class="btn btn-lg btn-outline-white mb-2 rounded-pill scroll">Give us a Call</a>
+                      <a href="#contact" class="btn btn-lg btn-outline-white mb-2 rounded-pill scroll">Send us an Email</a>
+                    </div>
                   </div>
+                  <!--/column -->
                 </div>
+                <!--/.row -->
+              </div>
+              <!--/.container -->
+            </div>
+            <!--/.swiper-slide -->
+          </div>
+          <!--/.swiper-wrapper -->
+        </div>
+        <!-- /.swiper -->
+      </div>
+      <!-- /.swiper-container -->
+    </section>
+    <section id="about">
+      <div class="container py-10 py-md-12">
+        <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+          <div class="col-lg-6">
+            <i class="fa-solid fa-wrench fa-3x h1 mb-4"></i>
+            <h2 class="display-4 mb-3">Who Are We?</h2>
+            <p class="lead fs-lg">
+              We're a team of specialists who work with only the most qualified and experienced technicians in Montgomery and Harris counties to help you resolve your plumbing issues <span class="underline">effortlessly</span>.
+            </p>
+            <p class="mb-6">Our business is committed to delivering excellent quality service and value with every job. We pride ourselves handling the most complicated issues while adhering to the highest standards of customer satisfaction.</p>
+            <div class="row gy-3 gx-xl-8">
+              <div class="col-xl-6">
+                <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
+                  <li><span><i class="uil uil-check"></i></span><span>Qualified professionals dedicated to tackling any job.</span></li>
+                  <li class="mt-3"><span><i class="uil uil-check"></i></span><span>Competitive pricing that won't break the bank.</span></li>
+                </ul>
+              </div>
+              <!--/column -->
+              <div class="col-xl-6">
+                <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
+                  <li><span><i class="uil uil-check"></i></span><span>Customer service standards that exceed expectations.</span></li>
+                  <li class="mt-3"><span><i class="uil uil-check"></i></span><span>24/7 same-day emergency services for urgent situations.</span></li>
+                </ul>
+              </div>
+              <!--/column -->
+            </div>
+            <!--/.row -->
+          </div>
+          <!--/column -->
+          <div class="col-lg-6 position-relative order-lg-2">
+            <div class="shape bg-dot primary rellax w-16 h-20 d-sm-none d-md-block" data-rellax-speed="1" style="top: 3rem; left: 5.5rem"></div>
+            <div class="overlap-grid overlap-grid-2">
+              <div class="item">
+                <figure class="rounded shadow">
+                  <img 
+                    srcset="./assets/img/photos/closeup-pipe-cutting-320w.JPG 768w, ./assets/img/photos/closeup-pipe-cutting-600w.JPG"
+                    src="./assets/img/photos/closeup-pipe-cutting-600w.JPG" 
+                    loading="lazy"
+                    alt="">
+                </figure>
+              </div>
+              <div class="item">
+                <figure class="rounded shadow">
+                  <img 
+                    srcset="./assets/img/photos/sink-and-shower-320w.JPG 768w, ./assets/img/photos/sink-and-shower-800w.JPG"
+                    src="./assets/img/photos/sink-and-shower-800w.JPG" 
+                    loading="lazy"
+                    alt="" />
+                  </figure>
               </div>
             </div>
           </div>
+          <!--/column -->
         </div>
+        <!--/.row -->
       </div>
-
-    </section>
-    <section id="about">
-
+      <!-- /.container -->
     </section>
     <section id="services">
       <div class="container">
@@ -207,6 +270,92 @@
       </div>
     </section>
     <section id="faq">
+      <div class="container py-10 py-md-12">
+        <h2 class="display-4 mb-3 text-center">Frequently Asked Questions</h2>
+        <p class="lead text-center mb-10 px-md-16 px-lg-0">Don't see your question here? Feel free to <a href="#contact" class="scroll">send us an email</a>.</p>
+        <div class="row">
+          <div class="col-lg-6 mb-0">
+            <div id="accordion-1" class="accordion-wrapper">
+              <div class="card accordion-item">
+                <div class="card-header" id="accordion-heading-1-1">
+                  <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#accordion-collapse-1-1" aria-expanded="false" aria-controls="accordion-collapse-1-1">What kind of services do you offer?</button>
+                </div>
+                <!-- /.card-header -->
+                <div id="accordion-collapse-1-1" class="collapse" aria-labelledby="accordion-heading-1-1" data-bs-target="#accordion-1">
+                  <div class="card-body">
+                    <p>
+                      Our services include on-call emergency assistance, video camera pipe inspection, drain cleaning services, clog removal, low water pressure adjustment, pipe repair and sealing, fixture installation, commercial and business plumbing, water heater services, gas line plumbing, maintenance services, water softener filtration systems, and more!
+                    </p>
+                    <p>
+                      We only work with qualified and experienced plumbers and technicians to ensure the issue is resolved correctly the first time. 
+                    </p>
+                  </div>
+                  <!-- /.card-body -->
+                </div>
+                <!-- /.collapse -->
+              </div>
+              <!-- /.card -->
+              <div class="card accordion-item">
+                <div class="card-header" id="accordion-heading-1-2">
+                  <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#accordion-collapse-1-2" aria-expanded="false" aria-controls="accordion-collapse-1-2">Which areas do you service?</button>
+                </div>
+                <!-- /.card-header -->
+                <div id="accordion-collapse-1-2" class="collapse" aria-labelledby="accordion-heading-1-2" data-bs-target="#accordion-1">
+                  <div class="card-body">
+                    <p>
+                      We service all of The Woodlands and the surrounding areas including Conroe, Splendora, New Caney, Porter, Spring, Tomball, Magnolia, and Montgomery.
+                    </p>
+                    <p>
+                      We also service most areas of North Houston. <a href="tel:1234567890">Give us a call</a> to see if we service your area!
+                    </p>                  
+                  </div>
+                  <!-- /.card-body -->
+                </div>
+                <!-- /.collapse -->
+              </div>
+              <!-- /.card -->
+            </div>
+            <!-- /.accordion-wrapper -->
+          </div>
+          <!--/column -->
+          <div class="col-lg-6">
+            <div id="accordion-2" class="accordion-wrapper">
+              <div class="card accordion-item">
+                <div class="card-header" id="accordion-heading-2-1">
+                  <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#accordion-collapse-2-1" aria-expanded="false" aria-controls="accordion-collapse-2-1">Where can I find the prices?</button>
+                </div>
+                <!-- /.card-header -->
+                <div id="accordion-collapse-2-1" class="collapse" aria-labelledby="accordion-heading-2-1" data-bs-target="#accordion-2">
+                  <div class="card-body">
+                    <p>Each project is individual, so our prices can vary. We accept payment in the form of cash, card, and financing options. To quote a more specific estimate, <a href="tel:1234567890">give us a call today!</a></p>
+                  </div>
+                  <!-- /.card-body -->
+                </div>
+                <!-- /.collapse -->
+              </div>
+              <!-- /.card -->
+              <div class="card accordion-item">
+                <div class="card-header" id="accordion-heading-2-2">
+                  <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#accordion-collapse-2-2" aria-expanded="false" aria-controls="accordion-collapse-2-2">How soon until someone arrives?</button>
+                </div>
+                <!-- /.card-header -->
+                <div id="accordion-collapse-2-2" class="collapse" aria-labelledby="accordion-heading-2-2" data-bs-target="#accordion-2">
+                  <div class="card-body">
+                    <p>We offer 24/7 same-day emergency assistance. Typically, it can take our plumbers between one to two hours for the plumbers to arrive. <a href="tel:1234567890">Let's book your appointment today!</a></p>
+                  </div>
+                  <!-- /.card-body -->
+                </div>
+                <!-- /.collapse -->
+              </div>
+              <!-- /.card -->
+            </div>
+            <!-- /.accordion-wrapper -->
+          </div>
+          <!--/column -->
+        </div>
+        <!--/.row -->
+      </div>
+      <!-- /.container -->
 
     </section>
     <section id="blog">
