@@ -393,14 +393,12 @@ animation: loader-scale 1s ease-out infinite;
 
 /*==================== NAVBAR ====================*/
 .navbar__mobile-checkbox {
-  position: fixed;
-  display: block;
-  z-index: 1050;
+  display: none;
 }
 
 .navbar__mobile-label {
   position: fixed;
-  display: flex;
+  width: 100%;
   z-index: 1050;
 }
 .navbar__mobile-label::before {
@@ -426,6 +424,16 @@ animation: loader-scale 1s ease-out infinite;
 
 .navbar__mobile-checkbox:checked + .navbar__mobile-label ~ aside {
   transform: translateX(0%);
+}
+
+.navbar__mobile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0rem 0rem 1.25rem rgba(30, 34, 40, 0.06);
+  padding: 1.5rem 2rem 1.5rem 2rem;
 }
 
 aside {
