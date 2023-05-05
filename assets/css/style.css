@@ -248,6 +248,7 @@ address {
 
 /*==================== REUSABLE CSS CLASSES ====================*/
 .section {
+  scroll-margin-top: 9.5rem;
   padding: 0 0 2rem 0;
 }
 
@@ -391,7 +392,99 @@ animation: loader-scale 1s ease-out infinite;
 }
 
 /*==================== NAVBAR ====================*/
-.navbar {
+.navbar__mobile-checkbox {
+  position: fixed;
+  display: block;
+  z-index: 1050;
+}
+
+.navbar__mobile-label {
+  position: fixed;
+  display: flex;
+  z-index: 1050;
+}
+.navbar__mobile-label::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: -1em;
+  transform-origin: 50% 50%;
+  transform: scale(1.3);
+  opacity: 1;
+  transition: all 300ms linear;
+}
+
+.navbar__mobile-checkbox:checked + .navbar__mobile-label::before {
+  width: 100vw;
+  height: 100vh;
+  left: calc(50vw - 1em);
+  background-color: rgba(0, 0, 0, 0.9);
+  transform: scale(1);
+  opacity: 1;
+  transition: all 300ms linear;
+}
+
+.navbar__mobile-checkbox:checked + .navbar__mobile-label ~ aside {
+  transform: translateX(0%);
+}
+
+aside {
+  position: fixed;
+  width: 16rem;
+  height: 100%;
+  z-index: 1051;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: #fff;
+  transition: all 300ms;
+  transform: translateX(-100%);
+}
+
+
+/* .navbar__mobile-checkbox {
+  display: block;
+  position: fixed;
+  text-align: right;
+  margin-left: 10rem;
+}
+
+.navbar__mobile-label {
+  position: fixed;
+  width: 100%;
+}
+
+.navbar__mobile-label::before {
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+}
+
+.navbar__mobile-label:checked ~ .navbar__mobile-label::before {
+  opacity: 1;
+}
+
+.navbar__mobile {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.97);
+  padding: 1.5rem 2rem 1.5rem 2rem;
+  box-shadow: 0rem 0rem 1.25rem rgba(30, 34, 40, 0.06);
+}
+
+.navbar__image {
+  height: 100%;
+  margin-right: 0;
+  margin-top: var(--m-1-5);
+} */
+
+
+
+
+
+
+
+/* .navbar {
   position: fixed !important;
   display: flex;
   flex-wrap: wrap;
@@ -408,13 +501,47 @@ animation: loader-scale 1s ease-out infinite;
   width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  padding: 1.5rem 2rem 1.5rem 2rem;
 }
 
 .navbar__mobile-child {
-  text-align: center;
-  margin: 1rem;
-  flex: 1 0 auto;
+  width: 100%;
 }
+
+.navbar__mobile-hamburger-icon {
+  text-align: right;
+  margin-top: var(--m-0-75);
+}
+
+.navbar__mobile-checkbox {
+  display: block;
+}
+
+.navbar__offcanvas {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  max-width: 0vw;
+  height: 100vh;
+  z-index: 1045;
+  color: var(--bs-white);
+  background-color: var(--bs-gray-900);
+  box-shadow: none;
+  transition: all 300ms ease-in-out;
+} */
+
+/* .navbar__mobile-checkbox:checked ~ .overlay {
+  display: block;
+} */
+
+
+
+
+
+
+
 
 
 /* .nav {
@@ -510,7 +637,7 @@ nav__close:hover {
 
 /*==================== HOME ====================*/
 .home__background-img {
-  height: 500px !important;
+  height: 640px !important;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -520,9 +647,9 @@ nav__close:hover {
 .home__overlay {
   width: 100%;
   height: 100%;
-  padding: 1rem;
   background-color: rgba(30, 34, 40, 0.5);
   z-index: 2;
+  padding: 11rem 1rem 1rem 1rem;
 }
 
 .home__title {
@@ -565,6 +692,7 @@ nav__close:hover {
   color: var(--bs-navy);
   background-color: var(--bs-white);
 }
+
 
 /* .home {
     padding: 1.25rem 0 0rem 0;
@@ -953,14 +1081,15 @@ nav__close:hover {
   box-shadow: 0 0 0 0.05rem rgba(8, 60, 130, 0.06), 0rem 0rem 1.25rem rgba(30, 34, 40, 0.04);
 }
 
-.faq__accordion input {
+.faq__accordion-checkbox {
   display: none;
 }
 
-.faq__accordion label {
+.faq__accordion-label {
   display: block;    
   cursor: pointer;
   width: 100%;
+  max-height: 100vh;
   padding: 0 0 0 1rem;
   margin: 0;
   border: 0;
@@ -971,7 +1100,7 @@ nav__close:hover {
   background: none;
 }
 
-.faq__accordion label:before {
+.faq__accordion-label:before {
   content: '>';
   position: absolute;
   left: 2.5rem;
@@ -980,7 +1109,7 @@ nav__close:hover {
   transition: transform 300ms;
 }
 
-.faq__accordion label:hover {
+.faq__accordion-label:hover {
   color: var(--bs-blue);
 }
 
@@ -988,17 +1117,17 @@ nav__close:hover {
   padding: 1rem 1rem 0 1rem;
 }
 
-.faq__accordion > input + label + .faq__accordion-text {
+.faq__accordion-text {
   max-height: 0vh;
   transition: 500ms;
   overflow: hidden;
 }
 
-.faq__accordion > input:checked + label + .faq__accordion-text {
+.faq__accordion-checkbox:checked ~ .faq__accordion-text {
   max-height: 100vh;
 }
 
-.faq__accordion > input:checked + label:before {
+.faq__accordion-checkbox:checked ~ .faq__accordion-label::before {
   transition: all 300ms ease-in-out;
   transform: rotate(270deg);
 }
