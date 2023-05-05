@@ -576,7 +576,6 @@ aside {
 @keyframes slide-in-down {
 	50% {
 		opacity: 0;
-    translateY(-100%);
 	}
 	100% {
 		opacity: 1;
@@ -584,13 +583,14 @@ aside {
 	}
 }
 
-.slide-right {
-	transform: translateX(200%);
+.slide-left {
+  width: 100%;
+	transform: translateX(-200%);
 	opacity: 0;
-	animation: slide-in-right 2.5s ease forwards;
+	animation: slide-in-left 2.5s ease forwards;
 }
 
-@keyframes slide-in-right {
+@keyframes slide-in-left {
 	50% {
 		opacity: 0;
 	}
