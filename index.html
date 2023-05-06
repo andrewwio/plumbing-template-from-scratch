@@ -23,7 +23,8 @@
   <input class="navbar__mobile-checkbox" type="checkbox" id="offcanvas-toggle">
   <label class="navbar__mobile-label" for="offcanvas-toggle" class="menu-icon">
     <div class="navbar__mobile">
-      <img src="./assets/img/logos/woodlands-dark-130w.png" alt="">
+      <button><a href="#home"><img src="./assets/img/logos/woodlands-dark-130w.png" alt=""></a></button>
+      <button class="navbar__phone-button"><a class="button" href="#tel:1234567890">(123) 456-7890</a></button>
       <img class="navbar__image" src="./assets/img/icons/hamburger-icon-24w.png" alt="">
     </div>
   </label>
@@ -65,8 +66,8 @@
             <h1 class="home__title slide-down">Plumber Woodlands</h1>
             <p class="home__subheading slide-left">We connect you with qualified local plumbers in The Woodlands and surrounding areas.</p>
             <div class="home__button slide-up">
-              <a href="tel:1234567890">Give us a Call</a>
-              <a href="#contact">Send an Email</a>
+              <a class="button" href="tel:1234567890">Give us a Call</a>
+              <a class="button" href="#contact">Send an Email</a>
             </div>
           </div>
         </div>
@@ -75,7 +76,7 @@
     <section class="section" id="about">
       <div class="container">
         <div class="row">
-          <div class="col-lg-6">
+          <div class="column">
             <img class="about__icon" src="./assets/img/icons/wrench-icon-48w.png" alt="">
             <h2 class="about__title">Who Are We?</h2>
             <p class="about__subheading">
@@ -83,7 +84,7 @@
             </p>
             <p>Our business is committed to delivering excellent quality service and value with every job. We pride ourselves handling the most complicated issues while adhering to the highest standards of customer satisfaction.</p>
             <div class="row">
-              <div class="col-xl-6">
+              <div class="column">
                 <div class="about__flex">
                   <div class="about__flex-child about__bullet">
                     <img src="./assets/img/icons/checkbox-icon-24w.png" alt="">
@@ -101,7 +102,7 @@
                   </div>
                 </div>
               </div> 
-              <div class="col-xl-6">
+              <div class="column">
                 <div class="about__flex">
                   <div class="about__flex-child about__bullet">
                     <img src="./assets/img/icons/checkbox-icon-24w.png" alt="">
@@ -121,20 +122,18 @@
               </div> 
             </div>
           </div>
-          <div class="col-lg-6 position-relative order-lg-2">
-            <div class="shape bg-dot primary rellax w-16 h-20 d-sm-none d-md-block" data-rellax-speed="1" style="top: 3rem; left: 5.5rem"></div>
-            <div class="overlap-grid overlap-grid-2">
-              <div>
+          <div class="about__img-container">
+            <div class="about__dots"></div>
+            <div class="about__overlap-images">
+              <div class="about__img about__img-1">
                 <img
-                  class="about__img about__img-1" 
                   srcset="./assets/img/photos/closeup-pipe-cutting-320w.JPG 768w, ./assets/img/photos/closeup-pipe-cutting-600w.JPG"
                   src="./assets/img/photos/closeup-pipe-cutting-600w.JPG" 
                   loading="lazy"
                   alt="">
               </div>
-              <div>
+              <div class="about__img about__img-2">
                 <img
-                  class="about__img" 
                   srcset="./assets/img/photos/sink-and-shower-320w.JPG 768w, ./assets/img/photos/sink-and-shower-800w.JPG"
                   src="./assets/img/photos/sink-and-shower-800w.JPG" 
                   loading="lazy"
@@ -147,13 +146,9 @@
     </section>
     <section class="section" id="services">
       <div class="container">
-        <div class="services__row">
-          <div class="services__column">
-            <h2 class="services__title">Our Services</h2>
-            <h3 class="services__subtitle">Our company maintains the industry's best practices for all of your plumbing needs.</h3>
-          </div>
-        </div>
-        <div class="services__row">
+        <h2 class="services__title">Our Services</h2>
+        <h3 class="services__subtitle">Our company maintains the industry's best practices for all of your plumbing needs.</h3>
+        <div class="row">
           <div class="services__column">
             <div class="services__flex">
               <div class="services__flex-child services__icon">
@@ -227,20 +222,20 @@
       <div class="container">
         <h2 class="process__title">How We Do It?</h2>
         <p class="process__subheading">We'll take it from here. Let's make your plumbing problems a thing of the past.</p>
-        <div class="process__row">
-          <div class="process__column"> <span class="process__circle button">01</span>
+        <div class="row">
+          <div class="process__column"> <span class="process__circle">01</span>
             <h4 class="process__subtitle">Contact</h4>
             <p class="process__text">Our team asks a few questions about the issue at hand to make sure we send the best specialists.</p>
           </div>
-          <div class="process__column"> <span class="process__circle button">02</span>
+          <div class="process__column"> <span class="process__circle">02</span>
             <h4 class="process__subtitle">Appointment</h4>
             <p class="process__text">We schedule an appointment where certified, licensed plumbers arrive to further inspect the issue.</p>
           </div>
-          <div class="process__column"> <span class="process__circle button">03</span>
+          <div class="process__column"> <span class="process__circle">03</span>
             <h4 class="process__subtitle">Solution</h4>
             <p class="process__text">Experienced technicians get to work using top of the line tools and equipment to get the job done.</p>
           </div>
-          <div class="process__column"> <span class="process__circle button">04</span>
+          <div class="process__column"> <span class="process__circle">04</span>
             <h4 class="process__subtitle">Payment</h4>
             <p class="process__text">Processing payment is easy with cash, card, or financing options. Don't forget to <a href="#contact" class="scroll">leave us a review!</a></p>
           </div>
@@ -252,7 +247,7 @@
         <h2 class="faq__title">Frequently Asked Questions</h2>
         <p class="faq__subheading">Don't see your question here? Feel free to <a href="#contact" class="scroll">send us an email</a>.</p>
         <div class="row">
-          <div class="col">
+          <div class="faq__column">
             <div class="faq__accordion-wrapper">
               <div class="faq__accordion">
                 <input class="faq__accordion-checkbox" type="checkbox" id="accordion-1" />
@@ -267,6 +262,8 @@
                 </div>
               </div>
             </div>
+          </div>
+          <div class="faq__column">
             <div class="faq__accordion-wrapper">
               <div class="faq__accordion">
                 <input class="faq__accordion-checkbox" type="checkbox" id="accordion-2" />
@@ -282,7 +279,7 @@
               </div>
             </div>
           </div>
-          <div class="col">
+          <div class="faq__column">
             <div class="faq__accordion-wrapper">
               <div class="faq__accordion">
                 <input class="faq__accordion-checkbox" type="checkbox" id="accordion-3" />
@@ -292,6 +289,8 @@
                 </div>
               </div>
             </div>
+          </div>
+          <div class="faq__column">
             <div class="faq__accordion-wrapper">
               <div class="faq__accordion">
                 <input class="faq__accordion-checkbox" type="checkbox" id="accordion-4" />
@@ -311,8 +310,8 @@
           <h2>How Quality Plumbing Can Actually Save You Money</h2>
           <p>As the old saying goes, “an ounce of prevention is worth a pound of cure.” Regular inspections can help you catch irregularities before they become emergencies. Here are some ways that quality plumbing can actually save you money.</p>
           <p>One of the easiest ways to save money is by simply replacing old fixtures with new ones. Newer fixtures like toilets and showerheads are often equipped with a “low-water” or “eco-friendly” option and newer faucets tend to have higher quality seals to prevent leaks. Not to mention, a dripping faucet can waste up to 180 gallons of water per month!</p>
-          <div class="row g-6 mt-3 mb-10">
-            <div class="col-md-6">
+          <div class="row">
+            <div class="blog__column">
               <img 
               class="blog__img"
               srcset="./assets/img/photos/plumber-tools-bathroom-320w.JPG 768w, ./assets/img/photos/plumber-tools-bathroom-800w.JPG"
@@ -320,7 +319,7 @@
               loading="lazy"
               alt="" />
             </div>
-            <div class="col-md-6">
+            <div class="blog__column">
               <img 
               class="blog__img"
               srcset="./assets/img/photos/tubes-meters-320w.JPG 768w, ./assets/img/photos/tubes-meters-800w.JPG"
@@ -328,7 +327,7 @@
               loading="lazy"
               alt="" />
             </div>
-            <div class="col-md-6">
+            <div class="blog__column">
               <img 
               class="blog__img"
               srcset="./assets/img/photos/plumbing-tools-background-320w.JPG 768w, ./assets/img/photos/plumbing-tools-background-800w.JPG"
@@ -336,7 +335,7 @@
               loading="lazy"
               alt="" />
             </div>
-            <div class="col-md-6">
+            <div class="blog__column">
               <img 
               class="blog__img"
               srcset="./assets/img/photos/standard-heater-320w.JPG 768w, ./assets/img/photos/standard-heater-800w.JPG"
@@ -353,8 +352,8 @@
           <h3>Do I Really Need a Plumber?</h3>
           <p>We all want to save ourselves the money and hassle of calling in the professionals. Luckily, there are a few plumbing issues that you can manage yourself. Let's take a look at the number one most common plumbing issue that's DIY friendly.</p>
           <p>Does your toilet sound like it's been running longer than usual? Let's take a look at some reasons why your toilet isn't flushing properly. First, remove the lid from the tank of the toilet. Take a look inside. There are three main parts: the fill valve, the flapper, and the float.</p>
-          <div class="row g-6 mt-3 mb-10">
-            <div class="col-md-6">
+          <div class="row">
+            <div class="blog__column">
               <img 
               class="blog__img"
               srcset="./assets/img/photos/pipes-and-cutter-320w.JPG 768w, ./assets/img/photos/pipes-and-cutter-800w.JPG"
@@ -362,7 +361,7 @@
               loading="lazy"
               alt="" />
             </div>
-            <div class="col-md-6">
+            <div class="blog__column">
               <img 
               class="blog__img"
               srcset="./assets/img/photos/plumbing-design-pipe-320w.JPG 768w, ./assets/img/photos/plumbing-design-pipe-800w.JPG"
@@ -370,7 +369,7 @@
               loading="lazy"
               alt="" />
             </div>
-            <div class="col-md-6">
+            <div class="blog__column">
               <img 
               class="blog__img"
               srcset="./assets/img/photos/valves-pipes-320w.JPG 768w, ./assets/img/photos/valves-pipes-800w.JPG"
@@ -378,7 +377,7 @@
               loading="lazy"
               alt="" />
             </div>
-            <div class="col-md-6">
+            <div class="blog__column">
               <img 
               class="blog__img"
               srcset="./assets/img/photos/toolboxes-in-bathroom-320w.JPG 768w, ./assets/img/photos/toolboxes-in-bathroom-800w.JPG"
