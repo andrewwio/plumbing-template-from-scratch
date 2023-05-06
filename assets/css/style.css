@@ -511,7 +511,7 @@ aside {
 
 /*==================== HOME ====================*/
 .home__background-img {
-  height: 640px !important;
+  height: 560px !important;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -521,9 +521,18 @@ aside {
 .home__overlay {
   width: 100%;
   height: 100%;
-  background-color: rgba(30, 34, 40, 0.5);
+  background-color: rgba(30, 34, 40, 0.7);
   z-index: 2;
-  padding: 11rem 1rem 1rem 1rem;
+  padding-top: 7rem;
+}
+
+.home__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 1rem;
 }
 
 .home__title {
@@ -535,8 +544,9 @@ aside {
 }
 
 .home__subheading {
-  margin-bottom: var(--m-2);
   text-align: center;
+  margin-bottom: var(--m-2);
+  padding: 0 0.5rem;
   font-size: var(--fs-h1);
   font-weight: var(--fw-300);
   line-height: 1.5;
@@ -552,7 +562,7 @@ aside {
   align-items: center;
   justify-content: center;
   margin-bottom: var(--m-0-5);
-  padding: 0.65rem 1.4rem;
+  padding: 0.8rem 2rem;
   font-size: var(--fs-h3);
   text-decoration: inherit;
   color: var(--bs-white);
