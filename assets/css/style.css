@@ -407,7 +407,7 @@ animation: loader-scale 1s ease-out infinite;
   position: absolute;
   content: '';
   top: 0;
-  left: -1em;
+  left: 0;
   transform-origin: 50% 50%;
   transform: scale(1.3);
   opacity: 1;
@@ -417,7 +417,6 @@ animation: loader-scale 1s ease-out infinite;
 .navbar__mobile-checkbox:checked + .navbar__mobile-label::before {
   width: 100vw;
   height: 100vh;
-  left: calc(50vw - 1em);
   background-color: rgba(0, 0, 0, 0.9);
   transform: scale(1);
   opacity: 1;
@@ -709,7 +708,7 @@ aside {
 }
 
 .about__bullet {
-  flex-shrink: 6;
+  flex-shrink: 7;
   margin-top: 0.1rem;
 }
 
