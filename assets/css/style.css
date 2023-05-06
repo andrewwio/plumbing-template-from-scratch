@@ -249,7 +249,7 @@ address {
 /*==================== REUSABLE CSS CLASSES ====================*/
 .section {
   scroll-margin-top: 9.5rem;
-  padding: 0 0 2rem 0;
+  padding: 0 0 1rem 0;
 }
 
 .section__title {
@@ -728,7 +728,9 @@ aside {
   box-shadow: 0rem 0rem 1.25rem rgba(30, 34, 40, 0.04) !important;
 }
 
-
+.about__img-1 {
+  display: none;
+}
 
 /*==================== SKILLS ====================*/
 .skills__container {
