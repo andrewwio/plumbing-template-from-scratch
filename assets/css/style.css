@@ -827,6 +827,10 @@ aside {
   border-radius: 0.4rem;
 }
 
+.blog__img-hidden {
+  display: none;
+}
+
 /*==================== CONTACT ====================*/
 
 .contact__card {
@@ -1083,6 +1087,10 @@ aside {
     flex: 0 0 auto;
     width: 50%;
     padding: 0 1rem;
+  }
+
+  .blog__img-hidden {
+    display: block;
   }
 
   .contact__card {
