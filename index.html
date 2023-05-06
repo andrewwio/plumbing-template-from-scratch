@@ -20,12 +20,12 @@
 
 <body>
   <div class="page-loader" importance="high"></div>
-  <input class="navbar__mobile-checkbox" type="checkbox" id="offcanvas-toggle">
-  <label class="navbar__mobile-label" for="offcanvas-toggle" class="menu-icon">
-    <div class="navbar__mobile">
-      <button><a href="#home"><img src="./assets/img/logos/woodlands-dark-130w.png" alt=""></a></button>
-      <button class="navbar__phone-button"><a class="button" href="#tel:1234567890">(123) 456-7890</a></button>
-      <img class="navbar__image" src="./assets/img/icons/hamburger-icon-24w.png" alt="">
+  <input class="navbar__checkbox" type="checkbox" id="offcanvas-toggle">
+  <label class="navbar__label" for="offcanvas-toggle" class="menu-icon">
+    <div class="navbar">
+      <button class="navbar__logo"><a href="#home"><img src="./assets/img/logos/woodlands-dark-130w.png" alt=""></a></button>
+      <button class="navbar__phone"><a class="button" href="#tel:1234567890">(123) 456-7890</a></button>
+      <img class="navbar__hamburger" src="./assets/img/icons/hamburger-icon-24w.png" alt="">
     </div>
   </label>
   <aside class="navbar__offcanvas">
@@ -59,6 +59,20 @@
     </div>
   </aside>
   <div class="content__wrapper">
+    <header class="navbar__desktop-wrapper">
+      <div class="navbar__desktop">
+        <div class="navbar__desktop-logo"><a href="#home"><img src="./assets/img/logos/woodlands-dark-130w.png" alt=""></a></div>
+        <div class="navbar__desktop-nav">
+          <div class="navbar__desktop-nav-item"><a href="#about">About</a></div>
+          <div class="navbar__desktop-nav-item"><a href="#services">Services</a></div>
+          <div class="navbar__desktop-nav-item"><a href="#process">Process</a></div>
+          <div class="navbar__desktop-nav-item"><a href="#faq">FAQ</a></div>
+          <div class="navbar__desktop-nav-item"><a href="#blog">Blog</a></div>
+          <div class="navbar__desktop-nav-item"><a href="#contact">Contact</a></div>
+        </div>
+        <div class="navbar__desktop-phone button"><a class="button" href="#tel:1234567890">(123) 456-7890</a></div>
+      </div>
+    </header>
     <section id="home">
       <div class="home__background-img">
         <div class="home__overlay">
@@ -75,70 +89,70 @@
     </section>
     <section class="section" id="about">
       <div class="container">
+        <img class="about__icon" src="./assets/img/icons/wrench-icon-48w.png" alt="">
+        <h2 class="about__title">Who Are We?</h2>
+        <p class="about__subheading">
+          We're a team of specialists who work with only the most qualified and experienced technicians in Montgomery and Harris counties to help you resolve your plumbing issues <span class="underline">effortlessly</span>.
+        </p>
+        <p>Our business is committed to delivering excellent quality service and value with every job. We pride ourselves handling the most complicated issues while adhering to the highest standards of customer satisfaction.</p>
         <div class="row">
-          <div class="column">
-            <img class="about__icon" src="./assets/img/icons/wrench-icon-48w.png" alt="">
-            <h2 class="about__title">Who Are We?</h2>
-            <p class="about__subheading">
-              We're a team of specialists who work with only the most qualified and experienced technicians in Montgomery and Harris counties to help you resolve your plumbing issues <span class="underline">effortlessly</span>.
-            </p>
-            <p>Our business is committed to delivering excellent quality service and value with every job. We pride ourselves handling the most complicated issues while adhering to the highest standards of customer satisfaction.</p>
-            <div class="row">
-              <div class="column">
-                <div class="about__flex">
-                  <div class="about__flex-child about__bullet">
-                    <img src="./assets/img/icons/checkbox-icon-24w.png" alt="">
-                  </div>
-                  <div class="about__flex-child about__text">
-                    <p>Qualified professionals dedicated to tackling any job.</p>
-                  </div>
-                </div>
-                <div class="about__flex">
-                  <div class="about__flex-child about__bullet">
-                    <img src="./assets/img/icons/checkbox-icon-24w.png" alt="">
-                  </div>
-                  <div class="about__flex-child about__text">
-                    <p>Competitive pricing that won't break the bank.</p>
-                  </div>
-                </div>
-              </div> 
-              <div class="column">
-                <div class="about__flex">
-                  <div class="about__flex-child about__bullet">
-                    <img src="./assets/img/icons/checkbox-icon-24w.png" alt="">
-                  </div>
-                  <div class="about__flex-child about__text">
-                    <p>Customer service standards that exceed expectations.</p>
-                  </div>
-                </div>
-                <div class="about__flex">
-                  <div class="about__flex-child about__bullet">
-                    <img src="./assets/img/icons/checkbox-icon-24w.png" alt="">
-                  </div>
-                  <div class="about__flex-child about__text">
-                    <p>24/7 same-day emergency services for urgent situations.</p>
-                  </div>
-                </div>
-              </div> 
+          <div class="about__column">
+            <div class="about__flex">
+              <div class="about__flex-child about__bullet">
+                <img src="./assets/img/icons/checkbox-icon-24w.png" alt="">
+              </div>
+              <div class="about__flex-child about__text">
+                <p>Qualified professionals dedicated to tackling any job.</p>
+              </div>
+            </div>
+          </div> 
+          <div class="about__column">
+            <div class="about__flex">
+              <div class="about__flex-child about__bullet">
+                <img src="./assets/img/icons/checkbox-icon-24w.png" alt="">
+              </div>
+              <div class="about__flex-child about__text">
+                <p>Competitive pricing that won't break the bank.</p>
+              </div>
             </div>
           </div>
-          <div class="about__img-container">
-            <div class="about__dots"></div>
-            <div class="about__overlap-images">
-              <div class="about__img about__img-1">
-                <img
-                  srcset="./assets/img/photos/closeup-pipe-cutting-320w.JPG 768w, ./assets/img/photos/closeup-pipe-cutting-600w.JPG"
-                  src="./assets/img/photos/closeup-pipe-cutting-600w.JPG" 
-                  loading="lazy"
-                  alt="">
+          <div class="about__column">
+            <div class="about__flex">
+              <div class="about__flex-child about__bullet">
+                <img src="./assets/img/icons/checkbox-icon-24w.png" alt="">
               </div>
-              <div class="about__img about__img-2">
-                <img
-                  srcset="./assets/img/photos/sink-and-shower-320w.JPG 768w, ./assets/img/photos/sink-and-shower-800w.JPG"
-                  src="./assets/img/photos/sink-and-shower-800w.JPG" 
-                  loading="lazy"
-                  alt="" />
+              <div class="about__flex-child about__text">
+                <p>Customer service standards that exceed expectations.</p>
               </div>
+            </div>
+          </div> 
+          <div class="about__column">
+            <div class="about__flex">
+              <div class="about__flex-child about__bullet">
+                <img src="./assets/img/icons/checkbox-icon-24w.png" alt="">
+              </div>
+              <div class="about__flex-child about__text">
+                <p>24/7 same-day emergency services for urgent situations.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about__img-container">
+          <div class="about__dots"></div>
+          <div class="about__overlap-images">
+            <div class="about__img about__img-1">
+              <img
+                srcset="./assets/img/photos/closeup-pipe-cutting-320w.JPG 768w, ./assets/img/photos/closeup-pipe-cutting-600w.JPG"
+                src="./assets/img/photos/closeup-pipe-cutting-600w.JPG" 
+                loading="lazy"
+                alt="">
+            </div>
+            <div class="about__img about__img-2">
+              <img
+                srcset="./assets/img/photos/sink-and-shower-320w.JPG 768w, ./assets/img/photos/sink-and-shower-800w.JPG"
+                src="./assets/img/photos/sink-and-shower-800w.JPG" 
+                loading="lazy"
+                alt="" />
             </div>
           </div>
         </div>

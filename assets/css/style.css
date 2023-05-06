@@ -220,6 +220,22 @@ address {
 .row {
   display: flex;
   flex-wrap: wrap;
+  max-width: 100%;
+  width: 100%;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.8rem 2rem;
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-400);
+  border-radius: 50rem;
+  transition: all 0.2s ease;
+  box-shadow: none;
 }
 
 .underline {
@@ -299,37 +315,17 @@ animation: loader-scale 1s ease-out infinite;
   }
 }
 
-/*==================== LAYOUT ====================*/
-
-
-/*==================== BUTTONS ====================*/
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  vertical-align: middle;
-  padding: 0.8rem 2rem;
-  font-size: var(--fs-h3);
-  font-weight: var(--fw-400);
-  border-radius: 50rem;
-  transition: all 0.2s ease;
-  box-shadow: none;
-}
-
 /*==================== NAVBAR ====================*/
-.navbar__mobile-checkbox {
+.navbar__checkbox {
   display: none;
-  width: 100%;
-  z-index: var(--z-fixed);
 }
 
-.navbar__mobile-label {
+.navbar__label {
   position: fixed;
   width: 100%;
   z-index: var(--z-fixed);
 }
-.navbar__mobile-label::before {
+.navbar__label::before {
   position: absolute;
   content: '';
   top: 0;
@@ -340,7 +336,7 @@ animation: loader-scale 1s ease-out infinite;
   transition: all 300ms linear;
 }
 
-.navbar__mobile-checkbox:checked + .navbar__mobile-label::before {
+.navbar__checkbox:checked + .navbar__label::before {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.9);
@@ -349,31 +345,32 @@ animation: loader-scale 1s ease-out infinite;
   transition: all 300ms linear;
 }
 
-.navbar__mobile-checkbox:checked + .navbar__mobile-label ~ aside {
+.navbar__checkbox:checked + .navbar__label ~ aside {
   transform: translateX(0%);
 }
 
-.navbar__mobile {
+.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  padding: 1.5rem 2rem 1.5rem 2rem;
   background: rgba(255, 255, 255, 0.97);
   box-shadow: 0rem 0rem 1.25rem rgba(30, 34, 40, 0.06);
-  padding: 1.5rem 2rem 1.5rem 2rem;
 }
 
-.navbar__phone-button {
+.navbar__phone {
   display: none;
 }
 
-.navbar__phone-button a {
+.navbar__phone a {
   margin-left: 20rem;
   background-color: var(--bs-blue);
   color: var(--bs-white);
   font-family: var(--body-font);
 }
 
+/*==================== NAVBAR OFFCANVAS ====================*/
 aside {
   position: fixed;
   width: 15rem;
@@ -443,6 +440,45 @@ aside {
   color: var(--bs-white);
   font-size: var(--fs-h2);
   font-weight: var(--fw-600);
+}
+
+/*==================== NAVBAR DESKTOP ====================*/
+.navbar__desktop-wrapper {
+  display: none;
+  position: fixed;
+  z-index: var(--z-modal);
+  width: 100vw;
+  background: rgba(255, 255, 255, 0.97);
+}
+
+.navbar__desktop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem;
+  box-shadow: 0rem 0rem 1.25rem rgba(30, 34, 40, 0.06);
+}
+
+.navbar__desktop-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+}
+
+.navbar__desktop-nav-item a {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-600);
+  color: var(--bs-navy);
+}
+
+.navbar__desktop-nav-item a:hover {
+  color: var(--bs-blue);
+}
+
+.navbar__desktop-phone a {
+  background-color: var(--bs-blue);
+  color: var(--bs-white);
 }
 
 /*==================== HOME ====================*/
@@ -565,6 +601,10 @@ aside {
 .about__subheading {
   font-size: var(--fs-h2);
   line-height: 1.6;
+}
+
+.about__column {
+  width: 100%;
 }
 
 .about__flex {
@@ -744,6 +784,7 @@ aside {
 .faq__accordion-wrapper {
   margin-bottom: var(--m-1-5);
   padding: 1rem 1rem 0 1rem;
+  background-color: var(--bs-white);
   border-radius: 0.4rem;
   box-shadow: 0 0 0 0.05rem rgba(8, 60, 130, 0.06), 0rem 0rem 1.25rem rgba(30, 34, 40, 0.04);
 }
@@ -782,7 +823,7 @@ aside {
 
 .faq__accordion-text {
   max-height: 0vh;
-  transition: all 700ms ease-in-out;
+  transition: all 700ms ease-in;
   overflow: hidden;
   padding: 1rem 1rem 0 1rem;
 }
@@ -1022,11 +1063,12 @@ aside {
     padding: 2rem 1rem 0 1rem;
   }
 
-  .navbar__phone-button {
+  .navbar__phone {
     display: block;
   }
 
   .home__background-img {
+    height: 720px !important;
     background-image: url("/assets/img/photos/plumbing-hero-blueprint-1280w.JPG");
   }
 
@@ -1107,6 +1149,12 @@ aside {
 
   .footer__icon {
     flex-shrink: 6;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .navbar__label {
+    display: none;
   }
 }
 
