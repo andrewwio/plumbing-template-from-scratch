@@ -206,7 +206,7 @@ address {
 /*==================== LAYOUT ====================*/
 .section {
   scroll-margin-top: 9.5rem;
-  padding: 0 0 1rem 0;
+  padding: 0 1.5rem 1rem 1.5rem;
 }
 
 .container {
@@ -809,6 +809,7 @@ aside {
 }
 
 .faq__accordion-label span {
+  display: inline-block;
   padding-left: 2rem;
 }
 
