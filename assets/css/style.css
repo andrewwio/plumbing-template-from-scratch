@@ -829,7 +829,7 @@ aside {
   max-height: 0vh;
   transition: all 700ms ease-in;
   overflow: hidden;
-  padding: 1rem 1rem 0 1rem;
+  padding: 1rem 1rem 0 3rem;
 }
 
 .faq__accordion-checkbox:checked ~ .faq__accordion-text {
