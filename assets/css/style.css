@@ -213,8 +213,8 @@ address {
   max-width: 1260px;
   margin-top: var(--m-2-5);
   margin-bottom: var(--m-2-5);
-  margin-left: var(--m-1-5);
-  margin-right: var(--m-1-5);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .row {
@@ -687,7 +687,7 @@ aside {
   text-transform: uppercase; 
 }
 
-.services__subtitle {
+.services__subheading {
   margin-bottom: var(--m-2-5);
   text-align: center;
   line-height: 1.3;
@@ -798,20 +798,23 @@ aside {
   cursor: pointer;
   width: 100%;
   max-height: 100vh;
-  padding-left: 1rem;
   margin: 0;
-  border: 0;
+  padding-left: 1rem;
   font-size: var(--fs-h3);
   font-weight: var(--fw-600);
   color: var(--bs-navy);
+  border: 0;
   transition: all 300ms ease-in-out;
   background: none;
 }
 
-.faq__accordion-label:before {
+.faq__accordion-label span {
+  padding-left: 2rem;
+}
+
+.faq__accordion-label::before {
   content: '>';
   position: absolute;
-  left: 2.5rem;
   color: var(--bs-blue);
   transform: rotate(90deg);
   transition: transform 300ms;
@@ -1099,7 +1102,7 @@ aside {
     padding: 0 1rem;
   }
 
-  .services__subtitle {
+  .services__subheading {
     padding: 0 7rem;
   }
 
@@ -1109,7 +1112,7 @@ aside {
     padding: 0 1rem;
   }
 
-  .faq__accordion-wrapper {
+  /* .faq__accordion-wrapper {
     padding: 1.5rem 1rem 0.5rem 1rem;
   }
 
@@ -1119,7 +1122,7 @@ aside {
 
   .faq__accordion-label:before {
     left: 4rem;
-  }
+  } */
 
   .blog {
     padding: 4rem;
@@ -1153,8 +1156,73 @@ aside {
 }
 
 @media screen and (min-width: 1024px) {
+
   .navbar__label {
     display: none;
+  }
+
+  .container {
+    padding-left: var(--m-2-5);
+    padding-right: var(--m-2-5);
+  }
+
+  .home__container {
+    padding-left: 24rem;
+  }
+
+  .home__title {
+    margin-right: auto;
+    font-size: var(--fs-large);
+  }
+
+  .home__subheading {
+    padding-right: 4rem;
+    text-align: left;
+    font-size: var(--fs-h2);
+  }
+
+  .home__button {
+    margin-right: auto;
+  }
+
+  .services__subheading {
+    font-size: var(--fs-h1);
+  }
+
+  .process__title {
+    font-size: var(--fs-h1);
+  }
+
+  .process__circle {
+    font-size: var(--fs-h2);
+  }
+
+  .faq__title {
+    font-size: var(--fs-h1);
+  }
+
+  /* .faq__accordion-label {
+    padding-left: 3rem; 
+  }
+
+  .faq__accordion-label:before {
+    left: 6rem;
+  } */
+
+  .blog {
+    margin: 0 4rem;
+  }
+
+  .blog h2 {
+    font-size: var(--fs-h1);
+  }
+
+  .contact__title {
+    font-size: var(--fs-h1);
+  }
+
+  .contact__card {
+    padding: 5rem;
   }
 }
 
