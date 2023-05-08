@@ -1176,6 +1176,10 @@ aside {
   .footer__icon {
     flex-shrink: 6;
   }
+
+  .footer__icon img {
+    margin-top: 0;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -1301,6 +1305,10 @@ aside {
 
   .footer__container {
     padding: 0 6rem;
+  }
+
+  .footer__icon {
+    flex-shrink: 10;
   }
 }
 
