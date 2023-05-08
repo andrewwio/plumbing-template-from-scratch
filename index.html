@@ -24,23 +24,40 @@
     <header>
       <nav class="navbar">
         <div class="navbar__logo">
-          <a href="#home" class="navbar__logo-link">
+          <a href="#home">
             <img src="./assets/img/logos/woodlands-dark-130w.png" alt="">
           </a>
         </div>
-        <div class="navbar__nav">
-          <ul class="navbar__nav-list">
-            <li class="navbar__nav-item"><a href="#about">About</a></li>
-            <li class="navbar__nav-item"><a href="#services">Services</a></li>
-            <li class="navbar__nav-item"><a href="#process">Process</a></li>
-            <li class="navbar__nav-item"><a href="#faq">FAQ</a></li>
-            <li class="navbar__nav-item"><a href="#blog">Blog</a></li>
-            <li class="navbar__nav-item"><a href="#contact">Contact</a></li>
+        <div class="navbar__nav-container">
+          <div class="navbar__nav">
+            <div class="offcanvas-header">
+              <h3 class="offcanvas-title">Plumber<br>Woodlands</h3>
+              <button class="offcanvas-close">✕</button>
+            </div>
+            <ul class="navbar__nav-links">
+              <li class="navbar__nav-item"><a href="#about">About</a></li>
+              <li class="navbar__nav-item"><a href="#services">Services</a></li>
+              <li class="navbar__nav-item"><a href="#process">Process</a></li>
+              <li class="navbar__nav-item"><a href="#faq">FAQ</a></li>
+              <li class="navbar__nav-item"><a href="#blog">Blog</a></li>
+              <li class="navbar__nav-item"><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="offcanvas-footer">
+              <a href="tel:1234567890">Give us a Call<br>(123) 456-7890</a>
+            </div>
+          </div>
+        </div>
+        <div class="navbar__hamburger-container">
+          <ul class="navbar__hamburger-links">
+            <li class="navbar__phone">
+              <a class="button" href="tel:1234567890">(123) 456-7890</a>
+            </li>
+            <li class="navbar__hamburger">
+              <img src="./assets/img/icons/hamburger-icon-24w.png" alt="">
+            </li>
           </ul>
         </div>
-        <div class="navbar__hamburger" id="menuToggle">
-          <img src="./assets/img/icons/hamburger-icon-24w.png" alt="">
-        </div>
+        <div class="offcanvas-backdrop"></div>
       </nav>
     </header>
 
@@ -455,11 +472,28 @@
   
 </body>
 <script>
-  const navbar = document.querySelector('.navbar');
+  const navbar = document.querySelector(".navbar");
   const menuToggle = document.querySelector(".navbar__hamburger");
+  const backDrop = document.querySelector(".offcanvas-backdrop");
+  const offCanvasClose = document.querySelector(".offcanvas-close");
+  const navItem = document.querySelectorAll(".navbar__nav-item");
 
   menuToggle.addEventListener("click", () => {
-    navbar.classList.toggle("open");
+    navbar.classList.toggle("offcanvas");
+  });
+
+  backDrop.addEventListener("click", () => {
+    navbar.classList.toggle("offcanvas");
+  });
+
+  offCanvasClose.addEventListener("click", () => {
+    navbar.classList.toggle("offcanvas");
+  });
+
+  Array.from(navItem).forEach(element => {
+    element.addEventListener("click", () => {
+      navbar.classList.toggle("offcanvas");
+    });
   });
 </script>
 
