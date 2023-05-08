@@ -108,7 +108,6 @@ body {
 
 header {
   position: relative;
-  background-color: var(--bs-soft-blue);
 }
 
 h1 {
@@ -329,7 +328,7 @@ animation: loader-scale 1s ease-out infinite;
   margin-left: auto;
   margin-right: auto;
   padding: 0 1.1rem;
-  background: rgba(255, 255, 255, 0.99);
+  background-color: rgba(255, 255, 255, 0.99);
   box-shadow: 0rem 0rem 1.25rem rgba(30, 34, 40, 0.06);
 }
 
@@ -886,7 +885,6 @@ animation: loader-scale 1s ease-out infinite;
 }
 
 /*==================== CONTACT ====================*/
-
 .contact__card {
   background-color: var(--bs-soft-blue);
   border-radius: 0.5rem;
@@ -1081,6 +1079,10 @@ animation: loader-scale 1s ease-out infinite;
     padding: 0rem 3rem;
   }
 
+  .navbar__phone {
+    width: 220px;
+  }
+
   .navbar__phone a {
     display: block;
   }
@@ -1233,7 +1235,11 @@ animation: loader-scale 1s ease-out infinite;
   }
 
   .navbar__hamburger-container {
-    width: 250px;
+    width: auto;
+  }
+
+  .navbar__phone {
+    width: 170px;
   }
 
   .navbar__hamburger {
@@ -1334,6 +1340,45 @@ animation: loader-scale 1s ease-out infinite;
 }
 
 @media screen and (min-width: 1260px) {
+  header {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1045;
+    width: 100%;
+    height: auto;
+    padding: 2.5rem;
+    background-color: rgba(255, 255, 255, 0.99);
+    box-shadow: 0rem 0rem 1.25rem rgba(30, 34, 40, 0.06);
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: auto;
+    z-index: 1020;
+    width: 100%;
+    max-width: 1260px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1.1rem;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .navbar__logo {
+    width: 450px;
+  }
+
+  .navbar__hamburger-container {
+    width: 500px;
+  }
+  
   .container {
     max-width: 1260px;
   }
