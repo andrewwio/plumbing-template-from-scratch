@@ -1383,6 +1383,14 @@ animation: loader-scale 1s ease-out infinite;
     max-width: 1260px;
   }
 
+  .home__subheading {
+    padding-right: 18rem;
+  }
+
+  .home__button a {
+    font-size: var(--fs-h2);
+  }
+
   .about__img-container {
     margin-top: 1rem;
   }
