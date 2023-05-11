@@ -108,6 +108,7 @@ body {
 
 header {
   position: relative;
+  top: 0;
 }
 
 h1 {
@@ -1066,6 +1067,23 @@ animation: loader-scale 1s ease-out infinite;
 
 .footer__socials-icon {
   margin-right: 1rem;
+}
+
+.error__container {
+  padding: 6rem 1rem 0 1rem;
+}
+
+.error__img {
+  text-align: center;
+}
+
+.error__text {
+  text-align: center;
+}
+
+.error__home-button a {
+  background-color: var(--bs-blue);
+  color: var(--bs-white);
 }
 
 /*==================== MEDIA QUERIES ====================*/
