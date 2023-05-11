@@ -1073,7 +1073,8 @@ animation: loader-scale 1s ease-out infinite;
   margin-right: 1rem;
 }
 
-.error__container {
+.error__container,
+.thankyou__container {
   padding: 6rem 1rem 0 1rem;
 }
 
@@ -1081,11 +1082,13 @@ animation: loader-scale 1s ease-out infinite;
   text-align: center;
 }
 
-.error__text {
+.error__text,
+.thankyou__text {
   text-align: center;
 }
 
-.error__home-button a {
+.error__home-button a,
+.thankyou__phone-button a {
   background-color: var(--bs-blue);
   color: var(--bs-white);
 }
